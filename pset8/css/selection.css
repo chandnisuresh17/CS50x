@@ -1,0 +1,22 @@
+/* :root {
+    --economy: #ef476f;
+    --mainbg: #fffcf9;
+    --mainfontcolor: #2c3e50;
+    --mainselection: #fd746c;
+    --mainhighlight: #62bec1;
+} */
+
+::selection {
+    background: var(--mainselection);
+    color: var(--mainbg);
+}
+
+::-moz-selection {
+    background: var(--mainselection);
+    color: var(--mainbg);
+}
+
+::-webkit-selection {
+    background: var(--mainselection);
+    color: var(--mainbg);
+}

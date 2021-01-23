@@ -1,0 +1,287 @@
+@import "selection.css";
+@import "scrollbar.css";
+@import "article.css";
+@import "bootstrap-grid.min.css";
+:root {
+    --economy: #ef476f;
+    --mainbg: #fffcf9;
+    --mainfontcolor: #34090f;
+    --mainselection: #fd746c;
+    --mainhighlight: #fd746c;
+    /* --mainhighlight: #62bec1; */
+    --hoverrow: rgb(254, 227, 225);
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    font-family: Montserrat, source-han-sans-cjk-sc, source-han-sans-cjk-ja, sans-serif;
+    background-color: var(--mainbg);
+    /* font sc and ja use 700 for bold, other fonts 600 */
+}
+
+svg#图层_1 {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.main-anime {
+    background-color: #2c3e50;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+}
+
+.loader {
+    z-index: 999;
+}
+
+a#backtotop {
+    width: 20px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    stroke: var(--mainfontcolor);
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    z-index: 1000;
+}
+
+a#backtotop:hover {
+    cursor: pointer;
+    stroke: var(--mainselection);
+    transition: .3s;
+    /* background-color: #333; */
+}
+
+a#backtotop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+div.scrolldown {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 25px);
+    height: 50px;
+    width: 50px;
+    stroke: var(--mainbg);
+    cursor: pointer;
+}
+
+div.scrolldown:hover {
+    stroke: var(--mainselection);
+    transition: .3s;
+}
+
+div.parallax {
+    background-image: url("../img/maincover1.jpg");
+    /* opacity: 0.2; */
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+div.myinfo {
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    position: absolute;
+    left: calc(50vw - 150px);
+    top: 10vw;
+    align-items: center;
+}
+
+div.infopic img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-top-color: #2c3e50;
+    border-right-color: #fee3e1;
+    border-bottom-color: #c3e1ff;
+    border-left-color: #fd746c;
+    border-width: 5px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+div.social {
+    position: relative;
+    top: 0px;
+    width: 300px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+div.socialupperline {
+    position: relative;
+    margin-top: 55px;
+    margin-left: 0;
+    height: 1px;
+    width: 300px;
+    background-color: #2c3e50;
+}
+
+div.sociallowerline {
+    position: relative;
+    margin-top: 0px;
+    margin-right: 0;
+    height: 1px;
+    width: 300px;
+    background-color: #2c3e50;
+}
+
+svg.social {
+    position: absolute;
+    margin-top: -24px;
+    margin-left: -80px;
+}
+
+svg.social:hover {
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    fill: #fd746c;
+}
+
+iframe {
+    resize: both;
+}
+
+iframe.sound {
+    height: 200px;
+    width: 100%;
+}
+
+.archanime, .tabanime, .codeanime, .infoanime, .phyanime, .concanime {
+    opacity: 0;
+    transition: all .8s ease-out;
+}
+
+.archtxt, .tabtxt, .codetxt, .infotxt, .phytxt, .conctxt {
+    transform: translateX(-40px);
+}
+
+.archimg, .tabimg, .codeimg, .infoimg, .phyimg, .concimg {
+    transform: translateX(40px);
+}
+
+div.magicshow {
+    opacity: 1;
+    transform: none;
+}
+
+div.proj {
+    transition: all .3s;
+}
+
+a.readmore {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding-left: .6rem;
+    padding-right: .6rem;
+}
+
+/* a.readmore, .detail {
+    margin-left: -10px;
+    opacity: 0;
+} */
+
+div.proj:hover {
+    background-color: rgba(var(--hoverrow), .1);
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.05), 2px 4px 10px 0 rgba(0, 0, 0, 0.1), 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* div.proj:hover a.readmore, div.proj:hover .detail {
+    margin-left: inherit;
+    opacity: 1;
+} */
+
+.testcontent {
+    height: 35vh;
+    background-color: #06d6a0;
+    /* position: sticky;
+    position: -webkit-sticky;
+    top: 30vh; */
+}
+
+.testchart {
+    height: 20vh;
+    background-color: #ef476f;
+}
+
+.gapbeforefooter {
+    height: 10vh;
+}
+
+#content-progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    /* color: var(--mainselection); */
+}
+
+#content-progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+#content-progress::-webkit-progress-value {
+    background-color: var(--economy);
+}
+
+#content-progress::-moz-progress-bar {
+    background-color: var(--economy);
+}
+
+button {
+    background-color: var(--hoverrow);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-weight: 400;
+    padding: 0.375rem 0.75rem;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--mainselection);
+    color: var(--hoverrow);
+}
+
+.text-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#specify {
+    transition: all .6s;
+}

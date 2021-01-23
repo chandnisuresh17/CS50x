@@ -1,0 +1,140 @@
+/* :root {
+    --economy: #ef476f;
+    --mainbg: #fffcf9;
+    --mainfontcolor: #34090f;
+    --mainselection: #fd746c;
+    --mainhighlight: #fd746c;
+    --hoverrow: rgb(254, 227, 225);
+} */
+
+h1, h2, h3, p, a, ol, ul, li {
+    color: var(--mainfontcolor);
+    text-align: left;
+    /* padding-right: 3%; */
+}
+
+blockquote {
+    padding-left: 1rem;
+    margin-left: 0rem;
+    border-left: solid #888888 3px;
+}
+
+blockquote p {
+    font-size: .8rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    width: auto;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 200;
+    width: auto;
+}
+
+ul, ol, li {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+ol, ul {
+    margin-top: -10px;
+}
+
+b {
+    font-weight: 400;
+}
+
+a {
+    cursor: pointer !important;
+}
+
+a:hover {
+    color: var(--mainhighlight) !important;
+    transition: .3s;
+    text-decoration: overline underline;
+}
+
+a.readmore {
+    text-decoration: none;
+}
+
+a.readmore:hover {
+    text-decoration: none;
+}
+
+div.coverwords * {
+    color: #2c3e50;
+    text-align: center;
+    cursor: default;
+}
+
+div.coverwords h1 {
+    font-size: 3rem;
+}
+
+div.coverwords h2 {
+    font-size: 2rem;
+}
+
+div.row h2 {
+    text-align: center;
+}
+
+h3.more {
+    text-align: center;
+}
+
+/* div.coverwords *:hover {
+    color: var(--mainselection);
+    transition: .3s;
+} */
+
+h1.myname {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.6rem;
+    cursor: default;
+}
+
+h1.myname:hover {
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    color: #fd746c;
+}
+
+h2.maintitles {
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+h3.mytitles {
+    position: relative;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1rem;
+    float: left;
+    width: 33.33%;
+}
+
+hr {
+    border: double 1px var(--mainselection);
+}
